@@ -51,8 +51,6 @@
         gtag('config', 'GA_MEASUREMENT_ID');
     </script>
     
-    <!-- Cloudflare Turnstile -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     
     <style>
         * {
@@ -361,10 +359,6 @@
             min-height: 100px;
         }
         
-        .turnstile-wrapper {
-            margin-bottom: 1.25rem;
-        }
-        
         .form-submit {
             width: 100%;
             padding: 1rem;
@@ -545,11 +539,6 @@
                     <textarea id="message" name="message" placeholder="Optional: Tell us about your practice or biggest discovery headache..."></textarea>
                 </div>
                 
-                <!-- Cloudflare Turnstile (replace YOUR_SITE_KEY) -->
-                <div class="turnstile-wrapper">
-                    <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY" data-theme="dark"></div>
-                </div>
-                
                 <button type="submit" class="btn form-submit" id="submit-btn">Request Demo</button>
                 
                 <div id="form-status" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center;"></div>
@@ -564,19 +553,7 @@
         <p>© 2026 EvidentIQ. All rights reserved. | <a href="mailto:info@evident-iq.com">Contact</a></p>
     </footer>
     
-    <!-- Crisp Chat (replace CRISP_WEBSITE_ID) -->
-    <script type="text/javascript">
-        window.$crisp=[];
-        window.CRISP_WEBSITE_ID="CRISP_WEBSITE_ID";
-        (function(){
-            d=document;
-            s=d.createElement("script");
-            s.src="https://client.crisp.chat/l.js";
-            s.async=1;
-            d.getElementsByTagName("head")[0].appendChild(s);
-        })();
-    </script>
-<script>
+    <script>
     document.getElementById('demo-form').addEventListener('submit', async function(e) {
         e.preventDefault();
         
