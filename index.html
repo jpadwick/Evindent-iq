@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvidentIQ — AI Discovery That Stays Local</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics (replace GA_MEASUREMENT_ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #fff;
+            line-height: 1.6;
+            background: #0a0a0f;
+        }
+        
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: transparent;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .logo span {
+            color: #3b82f6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.75rem;
+            background: #3b82f6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+        }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 6rem 5% 4rem;
+            background: radial-gradient(ellipse at top, #1a1a2e 0%, #0a0a0f 70%);
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: #3b82f6;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
+            max-width: 800px;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.35rem;
+            color: #a0aec0;
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid #333;
+            color: #a0aec0;
+        }
+        
+        .btn-secondary:hover {
+            background: #1a1a2e;
+            border-color: #3b82f6;
+            color: #fff;
+            transform: translateY(-1px);
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 6rem 5%;
+            background: #0a0a0f;
+            text-align: center;
+        }
+        
+        .problem h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 3rem;
+        }
+        
+        .pain-points {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .pain-point {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+            padding: 2rem;
+            background: linear-gradient(135deg, #12121a 0%, #0d0d12 100%);
+            border: 1px solid #1a1a2e;
+            border-radius: 12px;
+        }
+        
+        .pain-point .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pain-point h3 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pain-point p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* Promise */
+        .promise {
+            padding: 6rem 5%;
+            background: linear-gradient(135deg, #0d0d12 0%, #12121a 100%);
+            text-align: center;
+        }
+        
+        .promise h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .promise h2 span {
+            color: #3b82f6;
+        }
+        
+        .promise p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 550px;
+            margin: 0 auto 2rem;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        
+        .trust-badge .check {
+            color: #10b981;
+            font-size: 1.25rem;
+        }
+        
+        /* Contact */
+        .contact {
+            padding: 6rem 5%;
+            background: #0a0a0f;
+        }
+        
+        .contact-container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+        
+        .contact > .contact-container > p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-form {
+            background: linear-gradient(135deg, #12121a 0%, #0d0d12 100%);
+            border: 1px solid #1a1a2e;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: left;
+        }
+        
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #a0aec0;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background: #0a0a0f;
+            border: 1px solid #1a1a2e;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: #fff;
+            transition: border-color 0.2s;
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #444;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        
+        .form-group select {
+            cursor: pointer;
+        }
+        
+        .form-group select option {
+            background: #0a0a0f;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .turnstile-wrapper {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+        
+        .form-note {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #444;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 2rem 5%;
+            background: #0a0a0f;
+            border-top: 1px solid #1a1a2e;
+            color: #444;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        
+        footer a {
+            color: #555;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: #3b82f6;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            header {
+                position: relative;
+                background: #0a0a0f;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+            
+            .pain-points {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Evident<span>IQ</span></div>
+        <a href="#contact" class="btn">Request Access</a>
+    </header>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-badge">Now accepting early access requests</div>
+        <h1>AI-powered discovery.<br><span>Your data stays local.</span></h1>
+        <p>The document intelligence that enterprise firms pay $500/month for — built for litigators who can't send privileged files to the cloud.</p>
+        <div class="hero-cta">
+            <a href="#contact" class="btn">Request a Demo</a>
+            <a href="#problem" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
+    
+    <!-- Problem -->
+    <section class="problem" id="problem">
+        <h2>Discovery is broken for small firms.</h2>
+        <div class="pain-points">
+            <div class="pain-point">
+                <div class="icon">💸</div>
+                <h3>Enterprise tools are priced for BigLaw</h3>
+                <p>Relativity, Logikcull — they're built for firms billing $800/hour, not yours.</p>
+            </div>
+            <div class="pain-point">
+                <div class="icon">🔓</div>
+                <h3>Cloud AI means cloud risk</h3>
+                <p>Uploading privileged documents to ChatGPT? That's a bar complaint waiting to happen.</p>
+            </div>
+            <div class="pain-point">
+                <div class="icon">⏰</div>
+                <h3>Manual review kills margins</h3>
+                <p>Ctrl+F through 5,000 documents. Miss something. Get sanctioned. Repeat.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Promise -->
+    <section class="promise">
+        <h2>What if AI could read your case — <span>without your files ever leaving your machine?</span></h2>
+        <p>We built something different. See it for yourself.</p>
+        <a href="#contact" class="btn">Request a Demo</a>
+        
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <span class="check">✓</span>
+                Documents never uploaded
+            </div>
+            <div class="trust-badge">
+                <span class="check">✓</span>
+                Attorney-client privilege protected
+            </div>
+            <div class="trust-badge">
+                <span class="check">✓</span>
+                No monthly subscription
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>See It In Action</h2>
+            <p style="color: #666; margin-bottom: 2rem;">15-minute demo. No commitment. We'll show you exactly how it works.</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="you@firm.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="firm">Firm Name</label>
+                    <input type="text" id="firm" name="firm" placeholder="Your firm">
+                </div>
+                
+                <div class="form-group">
+                    <label for="size">Firm Size</label>
+                    <select id="size" name="firm_size">
+                        <option value="">Select...</option>
+                        <option value="solo">Solo Practitioner</option>
+                        <option value="2-5">2-5 Attorneys</option>
+                        <option value="6-20">6-20 Attorneys</option>
+                        <option value="21+">21+ Attorneys</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Anything else?</label>
+                    <textarea id="message" name="message" placeholder="Optional: Tell us about your practice or biggest discovery headache..."></textarea>
+                </div>
+                
+                <!-- Cloudflare Turnstile (replace YOUR_SITE_KEY) -->
+                <div class="turnstile-wrapper">
+                    <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY" data-theme="dark"></div>
+                </div>
+                
+                <button type="submit" class="btn form-submit">Request Demo</button>
+                
+                <p class="form-note">We respond within 24 hours. Your info stays private.</p>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 EvidentIQ. All rights reserved. | <a href="mailto:info@evident-iq.com">Contact</a></p>
+    </footer>
+    
+    <!-- Crisp Chat (replace CRISP_WEBSITE_ID) -->
+    <script type="text/javascript">
+        window.$crisp=[];
+        window.CRISP_WEBSITE_ID="CRISP_WEBSITE_ID";
+        (function(){
+            d=document;
+            s=d.createElement("script");
+            s.src="https://client.crisp.chat/l.js";
+            s.async=1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+</body>
+</html>
