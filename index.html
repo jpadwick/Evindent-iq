@@ -89,15 +89,24 @@
         }
         
         .hero-badge {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             padding: 0.5rem 1rem;
-            background: rgba(59, 130, 246, 0.15);
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
             border-radius: 50px;
             font-size: 0.85rem;
-            color: #f0883e;
+            color: #10b981;
             margin-bottom: 2rem;
             font-weight: 500;
+        }
+        
+        .hero-badge .dot {
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
         }
         
         .hero h1 {
@@ -110,10 +119,7 @@
         }
         
         .hero h1 span {
-            background: linear-gradient(135deg, #f0883e, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #f0883e;
         }
         
         .hero p {
@@ -391,7 +397,7 @@
     
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-badge">Now accepting early access requests</div>
+        <div class="hero-badge"><span class="dot"></span>Now accepting early access</div>
         <h1>AI-powered discovery.<br><span style="color: #f0883e;">Your data stays local.</span></h1>
         <p>The document intelligence that enterprise firms pay $500/month for — built for litigators who can't send privileged files to the cloud.</p>
         <div class="hero-cta">
