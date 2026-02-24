@@ -163,9 +163,18 @@
         
         .trust-line {
             margin-top: 2rem;
-            font-size: 0.85rem;
-            color: #666;
+            font-size: 0.9rem;
+            color: #888;
             max-width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .trust-line::before {
+            content: "🔒";
+            font-size: 0.85rem;
         }
         
         /* Section base */
@@ -173,12 +182,21 @@
             padding: 5rem 5%;
         }
         
-        /* The Problem */
+        /* The Problem - Callout style */
         .problem {
             background: #0a0a0f;
-            max-width: 800px;
-            margin: 0 auto;
             padding: 4rem 5%;
+        }
+        
+        .problem-content {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            padding-left: 2.5rem;
+            border-left: 3px solid #f0883e;
+            background: rgba(255,255,255,0.02);
+            border-radius: 0 8px 8px 0;
+            text-align: left;
         }
         
         .problem p {
@@ -195,9 +213,9 @@
             color: #fff;
         }
         
-        /* How It Works */
+        /* How It Works - Lighter dark */
         .how-it-works {
-            background: linear-gradient(135deg, #0d0d12 0%, #12121a 100%);
+            background: linear-gradient(180deg, #14141f 0%, #1a1a2a 100%);
         }
         
         .how-it-works h2 {
@@ -289,9 +307,9 @@
             line-height: 1.7;
         }
         
-        /* Built For */
+        /* Built For - Subtle accent background */
         .built-for {
-            background: linear-gradient(135deg, #0d0d12 0%, #12121a 100%);
+            background: linear-gradient(180deg, #111827 0%, #1a1f35 100%);
         }
         
         .built-for-content {
@@ -356,10 +374,10 @@
             color: #f0883e;
         }
         
-        /* Bottom CTA */
+        /* Bottom CTA - Subtle gradient with accent */
         .bottom-cta {
-            background: linear-gradient(135deg, #12121a 0%, #0d0d12 100%);
-            border-top: 1px solid rgba(255,255,255,0.08);
+            background: linear-gradient(180deg, #0d0d14 0%, #12121f 100%);
+            border-top: 2px solid rgba(240, 136, 62, 0.3);
         }
         
         .bottom-cta-content {
@@ -512,7 +530,7 @@
         <h1>AI case intelligence for employment and civil litigators.</h1>
         <p class="subheadline">EvidentIQ reads your pleadings, discovery, and case files — then builds fact timelines, surfaces key themes, and finds the evidence that supports your arguments, with citations back to the record. Prep faster. Miss less.</p>
         <div class="hero-cta">
-            <a href="#early-access" class="btn">Request Early Access (Free) →</a>
+            <a href="#early-access" class="btn">Request Early Access →</a>
             <a href="#how-it-works" class="btn-secondary">See How It Works ↓</a>
         </div>
         <p class="trust-line">Your documents stay private: encrypted in transit and at rest, never used for training, and deletable on request.</p>
@@ -520,8 +538,10 @@
     
     <!-- 2. The Problem -->
     <section class="problem">
-        <p><strong>Before every deposition, motion, or hearing, it's the same story.</strong> You're buried in hundreds of pages of discovery, emails, and pleadings — trying to find the three facts that actually matter before a deadline.</p>
-        <p><strong>EvidentIQ does that work for you.</strong></p>
+        <div class="problem-content">
+            <p><strong>Before every deposition, motion, or hearing, it's the same story.</strong> You're buried in hundreds of pages of discovery, emails, and pleadings — trying to find the three facts that actually matter before a deadline.</p>
+            <p><strong>EvidentIQ does that work for you.</strong></p>
+        </div>
     </section>
     
     <!-- 3. How It Works -->
@@ -639,7 +659,7 @@
                     <input type="text" id="caseload" name="caseload" placeholder="e.g., 15-20 active matters">
                 </div>
                 
-                <button type="submit" class="btn form-submit" id="submit-btn">Request Early Access (Free) →</button>
+                <button type="submit" class="btn form-submit" id="submit-btn">Request Early Access →</button>
                 
                 <div id="form-status" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center;"></div>
                 
@@ -692,7 +712,7 @@
             status.style.color = '#ef4444';
             status.innerHTML = 'Something went wrong. Please try again or email us directly.';
             btn.disabled = false;
-            btn.textContent = 'Request Early Access (Free) →';
+            btn.textContent = 'Request Early Access →';
         }
     });
     </script>
