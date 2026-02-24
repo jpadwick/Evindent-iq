@@ -179,7 +179,7 @@
         
         /* Section base */
         section {
-            padding: 5rem 5%;
+            padding: 6rem 5%;
         }
         
         /* The Problem - Callout style */
@@ -235,35 +235,46 @@
         
         .step {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             align-items: flex-start;
+            background: rgba(255,255,255,0.02);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.06);
         }
         
-        .step-number {
+        .step-icon {
             flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-            background: rgba(240, 136, 62, 0.15);
-            border: 1px solid rgba(240, 136, 62, 0.3);
-            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            background: rgba(240, 136, 62, 0.12);
+            border: 1px solid rgba(240, 136, 62, 0.25);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .step-label {
+            font-size: 0.8rem;
             color: #f0883e;
-            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
         }
         
         .step-content h3 {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: #fff;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             font-weight: 600;
         }
         
         .step-content p {
-            color: rgba(255,255,255,0.7);
-            font-size: 1rem;
+            color: rgba(255,255,255,0.65);
+            font-size: 0.95rem;
             line-height: 1.7;
         }
         
@@ -290,21 +301,33 @@
         .feature-card {
             background: linear-gradient(135deg, #12121a 0%, #0d0d12 100%);
             border: 1px solid rgba(255,255,255,0.08);
+            border-top: 2px solid #f0883e;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.75rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        
+        .feature-icon {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
         }
         
         .feature-card h3 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #fff;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             font-weight: 600;
         }
         
         .feature-card p {
-            color: rgba(255,255,255,0.65);
-            font-size: 0.95rem;
-            line-height: 1.7;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            line-height: 1.65;
         }
         
         /* Built For - Subtle accent background */
@@ -313,9 +336,9 @@
         }
         
         .built-for-content {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            text-align: center;
+            text-align: left;
         }
         
         .built-for h2 {
@@ -328,10 +351,13 @@
             font-size: 1.1rem;
             color: rgba(255,255,255,0.75);
             line-height: 1.8;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
         
-        .built-for p:last-child {
+        .built-for .upload-cta {
+            font-size: 1.15rem;
+            color: #f0883e;
+            margin-top: 1.5rem;
             margin-bottom: 0;
         }
         
@@ -357,21 +383,27 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            text-align: left;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 2rem;
         }
         
-        .security-statements p {
-            color: rgba(255,255,255,0.7);
+        .security-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .security-icon {
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .security-item p {
+            color: rgba(255,255,255,0.75);
             font-size: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .security-statements p::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #f0883e;
+            margin: 0;
         }
         
         /* Bottom CTA - Subtle gradient with accent */
@@ -549,24 +581,27 @@
         <h2>How It Works</h2>
         <div class="steps">
             <div class="step">
-                <div class="step-number">1</div>
+                <div class="step-icon">📁</div>
                 <div class="step-content">
+                    <div class="step-label">Step 1</div>
                     <h3>Upload your case files.</h3>
-                    <p>Pleadings, discovery, deposition transcripts, correspondence, notes — PDFs, Word, Excel, Outlook emails, images, and more. No special export or tagging — EvidentIQ ingests and indexes everything, with built-in OCR for scanned documents.</p>
+                    <p>Pleadings, discovery, deposition transcripts, correspondence — PDFs, Word, Excel, Outlook emails, images, and more. No special export or tagging. Built-in OCR for scanned documents.</p>
                 </div>
             </div>
             <div class="step">
-                <div class="step-number">2</div>
+                <div class="step-icon">💬</div>
                 <div class="step-content">
+                    <div class="step-label">Step 2</div>
                     <h3>Ask questions. Get cited answers.</h3>
-                    <p>Search your entire case using natural language. EvidentIQ finds relevant passages, builds fact chronologies, and identifies themes across documents — with citations to the underlying record.</p>
+                    <p>Search your entire case using natural language. EvidentIQ finds relevant passages, builds fact chronologies, and identifies themes — with citations to the record.</p>
                 </div>
             </div>
             <div class="step">
-                <div class="step-number">3</div>
+                <div class="step-icon">✓</div>
                 <div class="step-content">
+                    <div class="step-label">Step 3</div>
                     <h3>Prep faster. Argue with confidence.</h3>
-                    <p>Whether it's depo prep, early case assessment, or motion practice — you walk in with a complete picture of the record, not a stack of sticky notes.</p>
+                    <p>Whether it's depo prep, early case assessment, or motion practice — you walk in with a complete picture of the record.</p>
                 </div>
             </div>
         </div>
@@ -577,24 +612,29 @@
         <h2>What You Get</h2>
         <div class="features-grid">
             <div class="feature-card">
+                <div class="feature-icon">🔍</div>
                 <h3>Conversational Case Search</h3>
-                <p>Ask natural language questions — "What evidence supports a hostile work environment claim?" — and get answers with clickable citations back to the source documents.</p>
+                <p>Ask natural language questions — "What evidence supports a hostile work environment claim?" — and get cited answers linked to source documents.</p>
             </div>
             <div class="feature-card">
+                <div class="feature-icon">📅</div>
                 <h3>AI-Built Fact Timelines</h3>
-                <p>Generate a chronological timeline of key events across your case files. Filter by event type, importance level, and date range. Every event links back to its source.</p>
+                <p>Generate a chronological timeline of key events. Filter by type, importance, and date range. Every event links back to its source.</p>
             </div>
             <div class="feature-card">
+                <div class="feature-icon">⚡</div>
                 <h3>Contradiction Detection</h3>
-                <p>Surface conflicting statements across documents — denials vs. admissions — ranked by impeachment value. Both sides cited, with source documents for each.</p>
+                <p>Surface conflicting statements — denials vs. admissions — ranked by impeachment value. Both sides cited with source documents.</p>
             </div>
             <div class="feature-card">
+                <div class="feature-icon">📂</div>
                 <h3>Full Case Management</h3>
-                <p>Organize multiple matters with persistent conversations, document organization, and case metadata. Pick up exactly where you left off.</p>
+                <p>Organize multiple matters with persistent conversations and case metadata. Pick up exactly where you left off.</p>
             </div>
             <div class="feature-card">
+                <div class="feature-icon">📄</div>
                 <h3>Broad Format Support</h3>
-                <p>PDFs, Word, Excel, PowerPoint, Outlook emails (.msg/.eml), images, HTML, CSV, and more. Built-in OCR handles scanned documents automatically.</p>
+                <p>PDFs, Word, Excel, Outlook emails, images, and more. Built-in OCR handles scanned documents automatically.</p>
             </div>
         </div>
     </section>
@@ -604,7 +644,7 @@
         <div class="built-for-content">
             <h2>Built for Small Litigation Teams</h2>
             <p>You don't have a team of associates to review 10,000 pages overnight. EvidentIQ gives solo practitioners and small firms the same case preparation firepower that big defense firms staff with bodies — for depo prep, early case assessment, and motion practice.</p>
-            <p>No integrations required. No IT department needed. Upload and go.</p>
+            <p class="upload-cta"><strong>No integrations required. No IT department needed. Upload and go.</strong></p>
         </div>
     </section>
     
@@ -613,10 +653,22 @@
         <div class="security-content">
             <h2>Security & Confidentiality</h2>
             <div class="security-statements">
-                <p>All documents are encrypted in transit and at rest.</p>
-                <p>Your data is never used to train AI models.</p>
-                <p>Each case is siloed — no cross-contamination between matters or users.</p>
-                <p>Delete your data anytime. Deletion is immediate and permanent.</p>
+                <div class="security-item">
+                    <span class="security-icon">🔒</span>
+                    <p>All documents are encrypted in transit and at rest.</p>
+                </div>
+                <div class="security-item">
+                    <span class="security-icon">🛡️</span>
+                    <p>Your data is never used to train AI models.</p>
+                </div>
+                <div class="security-item">
+                    <span class="security-icon">📁</span>
+                    <p>Each case is siloed — no cross-contamination between matters or users.</p>
+                </div>
+                <div class="security-item">
+                    <span class="security-icon">🗑️</span>
+                    <p>Delete your data anytime. Deletion is immediate and permanent.</p>
+                </div>
             </div>
         </div>
     </section>
