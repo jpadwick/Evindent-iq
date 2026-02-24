@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EvidentIQ — AI-Powered Legal Discovery for Small Litigation Firms</title>
-    <meta name="description" content="AI document analysis with enterprise-grade security. E-discovery for solo practitioners and small litigation firms — without the $500/user/month price tag or consumer AI risk.">
-    <meta name="keywords" content="AI legal discovery, e-discovery software, litigation document analysis, small law firm ediscovery, local AI legal tech, document review software, legal document intelligence, deposition analysis, case management AI, legal tech, discovery software, litigation support">
+    <title>EvidentIQ — AI-Powered Case Intelligence for Litigators</title>
+    <meta name="description" content="AI-powered case intelligence for litigators — semantic search, contradiction detection, and deposition prep that enterprise firms have never had at any price.">
+    <meta name="keywords" content="AI legal discovery, e-discovery software, litigation document analysis, small law firm ediscovery, legal AI, document review software, legal document intelligence, deposition analysis, case management AI, legal tech, discovery software, litigation support, contradiction detection">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://evident-iq.com/">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://evident-iq.com/">
-    <meta property="og:title" content="EvidentIQ — AI Discovery with Enterprise-Grade Security">
-    <meta property="og:description" content="AI-powered document analysis for small litigation firms. Zero-retention infrastructure. Never exposed to consumer AI.">
+    <meta property="og:title" content="EvidentIQ — AI Case Intelligence for Litigators">
+    <meta property="og:description" content="Semantic search, contradiction detection, and deposition prep that enterprise firms have never had at any price.">
     <meta property="og:site_name" content="EvidentIQ">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="EvidentIQ — AI Discovery with Enterprise-Grade Security">
-    <meta name="twitter:description" content="AI-powered document analysis for small litigation firms. Zero-retention infrastructure. Never exposed to consumer AI.">
+    <meta name="twitter:title" content="EvidentIQ — AI Case Intelligence for Litigators">
+    <meta name="twitter:description" content="Semantic search, contradiction detection, and deposition prep that enterprise firms have never had at any price.">
     
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -29,7 +29,7 @@
         "name": "EvidentIQ",
         "applicationCategory": "Legal Software",
         "operatingSystem": "Windows, macOS",
-        "description": "AI-powered legal discovery and document analysis software for small litigation firms. Enterprise-grade AWS infrastructure with zero data retention keeps privileged documents secure.",
+        "description": "AI-powered case intelligence for litigators. Semantic search, contradiction detection, entity tracking, and deposition prep — capabilities enterprise firms have never had at any price.",
         "offers": {
             "@type": "Offer",
             "price": "0",
@@ -50,7 +50,6 @@
         gtag('js', new Date());
         gtag('config', 'G-8H5JB2FRW3');
     </script>
-    
     
     <style>
         * {
@@ -147,7 +146,7 @@
             color: #fff;
             margin-bottom: 1.5rem;
             line-height: 1.15;
-            max-width: 800px;
+            max-width: 900px;
         }
         
         .hero h1 span {
@@ -157,7 +156,7 @@
         .hero p {
             font-size: 1.35rem;
             color: #a0aec0;
-            max-width: 600px;
+            max-width: 700px;
             margin-bottom: 2.5rem;
         }
         
@@ -197,15 +196,16 @@
         .pain-points {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 2rem;
             flex-wrap: wrap;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
         .pain-point {
             flex: 1;
-            min-width: 250px;
+            min-width: 280px;
+            max-width: 320px;
             text-align: left;
             padding: 2rem;
             background: linear-gradient(135deg, #12121a 0%, #0d0d12 100%);
@@ -229,58 +229,142 @@
             font-size: 0.95rem;
         }
         
-        /* Promise */
-        .promise {
+        /* Capabilities Section */
+        .capabilities {
             padding: 6rem 5%;
             background: linear-gradient(135deg, #0d0d12 0%, #12121a 100%);
+        }
+        
+        .capabilities h2 {
+            text-align: center;
+            font-size: 2.25rem;
+            color: #fff;
+            margin-bottom: 3.5rem;
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+        }
+        
+        .capability-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .capability-card:hover {
+            border-color: #f0883e;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(240, 136, 62, 0.1);
+        }
+        
+        .capability-card .cap-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.25rem;
+        }
+        
+        .capability-card h3 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .capability-card p {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .capabilities-cta {
             text-align: center;
         }
         
-        .promise h2 {
-            font-size: 2.5rem;
+        /* Security Section */
+        .security {
+            padding: 5rem 5%;
+            background: #0a0a0f;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .security-content {
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .security h2 {
+            font-size: 1.75rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+        
+        .security p {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+        }
+        
+        /* Built For Section */
+        .built-for {
+            padding: 5rem 5%;
+            background: #0d0d12;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .built-for h2 {
+            text-align: center;
+            font-size: 1.75rem;
             color: #fff;
             margin-bottom: 1rem;
-            max-width: 700px;
+        }
+        
+        .built-for > div > p {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2.5rem;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
         
-        .promise h2 span {
-            color: #f0883e;
+        .built-for-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
         }
         
-        .promise p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 550px;
-            margin: 0 auto 2rem;
+        .built-for-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 1.25rem;
         }
         
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-        
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: #555;
+        .built-for-card h3 {
             font-size: 0.95rem;
+            color: #f0883e;
+            margin-bottom: 0.5rem;
         }
         
-        .trust-badge .check {
-            color: #10b981;
-            font-size: 1.25rem;
+        .built-for-card p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
         }
         
         /* Contact */
         .contact {
             padding: 6rem 5%;
             background: #0a0a0f;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
         
         .contact-container {
@@ -293,11 +377,6 @@
             font-size: 2rem;
             color: #fff;
             margin-bottom: 0.75rem;
-        }
-        
-        .contact > .contact-container > p {
-            color: #666;
-            margin-bottom: 2rem;
         }
         
         .contact-form {
@@ -413,9 +492,13 @@
             .pain-points {
                 gap: 1.5rem;
             }
+            
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
-<!-- Crisp Chat -->
+    <!-- Crisp Chat -->
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="a4352e39-768a-4735-9512-4c057618fe53";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
 <body>
@@ -425,26 +508,25 @@
         <a href="#contact" class="btn">Request Access</a>
     </header>
     
-    <!-- Hero -->
+    <!-- Section 1: Hero -->
     <section class="hero">
         <div class="hero-badge"><span class="dot"></span>Limited early access — founding member pricing</div>
-        <h1>AI-powered discovery.<br><span style="color: #f0883e;">Enterprise-grade security.</span></h1>
-        <p style="font-size: 1.25rem; color: #f0883e; margin-bottom: 0.5rem; font-weight: 500;">Ask your case a question. Get cited answers in seconds.</p>
-        <p>The document intelligence that enterprise firms pay $500/user/month for — built for litigators who refuse to trust privileged files to consumer AI.</p>
+        <h1>Ask your case a question.<br><span>Get cited answers in seconds.</span></h1>
+        <p>EvidentIQ is AI-powered case intelligence for litigators — semantic search, contradiction detection, and deposition prep that enterprise firms have never had at any price.</p>
         <div class="hero-cta">
             <a href="#contact" class="btn">Request a Demo</a>
             <a href="#problem" class="btn btn-secondary">Learn More</a>
         </div>
     </section>
     
-    <!-- Problem -->
+    <!-- Section 2: Pain Points -->
     <section class="problem" id="problem">
         <h2>Discovery is broken for small firms.</h2>
         <div class="pain-points">
             <div class="pain-point">
                 <div class="icon">💸</div>
                 <h3>Enterprise tools are priced for BigLaw</h3>
-                <p>Relativity, Logikcull — they're built for firms billing $800/hour, not yours.</p>
+                <p>Relativity, DISCO — they charge $500+/user/month and still don't give you AI-powered case analysis. You're paying for document review, not intelligence.</p>
             </div>
             <div class="pain-point">
                 <div class="icon">🔓</div>
@@ -459,74 +541,72 @@
         </div>
     </section>
     
-    <!-- Promise -->
-    <section class="promise">
-        <h2>What if AI could read your case — <span>without your files ever touching consumer AI services?</span></h2>
-        <p style="font-size: 1.1rem; color: #f0883e; margin-bottom: 0.5rem;">The only AI discovery tool that preserves attorney-client privilege by design.</p>
-        <p>We built something different. See it for yourself.</p>
-        <a href="#contact" class="btn">Request a Demo</a>
-        
-        <div class="trust-badges">
-            <div class="trust-badge">
-                <span class="check">✓</span>
-                Processed through secure, zero-retention infrastructure
+    <!-- Section 3: Capabilities -->
+    <section class="capabilities" id="capabilities">
+        <h2>Case intelligence that works the way you think.</h2>
+        <div class="capabilities-grid">
+            <div class="capability-card">
+                <div class="cap-icon">🔍</div>
+                <h3>Ask questions, get cited answers</h3>
+                <p>Search your entire case corpus in plain English. EvidentIQ returns specific, sourced answers with document references — not keyword matches.</p>
             </div>
-            <div class="trust-badge">
-                <span class="check">✓</span>
-                Attorney-client privilege protected
+            <div class="capability-card">
+                <div class="cap-icon">⚡</div>
+                <h3>Spot contradictions automatically</h3>
+                <p>EvidentIQ flags where witness statements, correspondence, and filings don't line up — across your entire document set, with specific source references.</p>
             </div>
-            <div class="trust-badge">
-                <span class="check">✓</span>
-                Never exposed to consumer AI services
+            <div class="capability-card">
+                <div class="cap-icon">👥</div>
+                <h3>Track every person across every document</h3>
+                <p>The same witness shows up in emails, depositions, contracts, and filings under different names and identifiers. EvidentIQ links them all, so you get the complete picture on any individual in seconds.</p>
+            </div>
+            <div class="capability-card">
+                <div class="cap-icon">📋</div>
+                <h3>Walk into depositions prepared</h3>
+                <p>See everything a witness has said across every document they appear in — contradictions, key dates, relationships — organized and ready before you sit down.</p>
             </div>
         </div>
-        
-        <!-- Trust Detail -->
-        <p style="max-width: 700px; margin: 2rem auto 0; font-size: 0.95rem; color: rgba(255,255,255,0.7); text-align: center; line-height: 1.6;">
-            Your documents are processed through secure, enterprise-grade AWS infrastructure — the same environment trusted by healthcare and financial institutions. AI analysis runs with zero data retention: your privileged content is processed and forgotten, never stored, never used to train models. No consumer AI service ever sees your files.
-        </p>
-    </section>
-    
-    <!-- How We're Different -->
-    <section style="padding: 3rem 5%; background: #0d0d12; border-top: 1px solid rgba(255,255,255,0.1);">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h2 style="font-size: 1.5rem; color: #fff; margin-bottom: 1.5rem;">How We're Different</h2>
-            <p style="font-size: 1.05rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1.5rem;">
-                Enterprise tools like Relativity are built for BigLaw. Cloud tools like Logikcull and GoldFynch put your privileged documents on someone else's servers. EvidentIQ gives you enterprise intelligence without the enterprise price — or the cloud risk.
-            </p>
-            <p style="font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.7;">
-                Unlike consumer AI tools, EvidentIQ doesn't expose your documents to public AI services or use them for model training. AI analysis runs through enterprise-grade AWS infrastructure with zero data retention — your privileged content is processed and forgotten, never stored, never learned from.
-            </p>
+        <div class="capabilities-cta">
+            <a href="#contact" class="btn">Request a Demo</a>
         </div>
     </section>
     
-    <!-- Built For Section (SEO) -->
-    <section class="built-for" style="padding: 4rem 5%; background: #0a0a0f; border-top: 1px solid rgba(255,255,255,0.1);">
+    <!-- Section 4: Security -->
+    <section class="security">
+        <div class="security-content">
+            <h2>Built for privileged documents.</h2>
+            <p>Your documents are processed through secure, enterprise-grade AWS infrastructure — the same environment trusted by healthcare and financial institutions. AI analysis runs with zero data retention: your privileged content is processed and forgotten, never stored, never used to train models. No consumer AI service ever sees your files.</p>
+        </div>
+    </section>
+    
+    <!-- Section 5: Who It's For -->
+    <section class="built-for">
         <div style="max-width: 900px; margin: 0 auto;">
-            <h2 style="text-align: center; font-size: 1.75rem; color: #fff; margin-bottom: 1rem;">Built for Litigators Who Need Answers Fast</h2>
-            <p style="text-align: center; color: rgba(255,255,255,0.7); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">EvidentIQ brings enterprise-grade e-discovery and AI-powered document analysis to solo practitioners and small litigation firms.</p>
+            <h2>Built for Litigators Who Need Answers Fast</h2>
+            <p>EvidentIQ brings case intelligence to solo practitioners and small litigation firms who've never had access to AI-powered discovery.</p>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.25rem;">
-                    <h3 style="font-size: 0.95rem; color: #f0883e; margin-bottom: 0.5rem;">Practice Areas</h3>
-                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Civil litigation, employment law, contract disputes, personal injury, family law, commercial litigation, insurance defense</p>
+            <div class="built-for-grid">
+                <div class="built-for-card">
+                    <h3>Practice Areas</h3>
+                    <p>Civil litigation, employment law, contract disputes, personal injury, family law, commercial litigation, insurance defense</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.25rem;">
-                    <h3 style="font-size: 0.95rem; color: #f0883e; margin-bottom: 0.5rem;">Document Types</h3>
-                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Depositions, discovery productions, contracts, correspondence, medical records, financial documents, expert reports</p>
+                <div class="built-for-card">
+                    <h3>Document Types</h3>
+                    <p>Depositions, discovery productions, contracts, correspondence, medical records, financial documents, expert reports</p>
                 </div>
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.25rem;">
-                    <h3 style="font-size: 0.95rem; color: #f0883e; margin-bottom: 0.5rem;">Use Cases</h3>
-                    <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6);">Document review, case preparation, discovery management, deposition prep, fact investigation, trial support</p>
+                <div class="built-for-card">
+                    <h3>Use Cases</h3>
+                    <p>Document review, case preparation, discovery management, deposition prep, fact investigation, trial support</p>
                 </div>
             </div>
         </div>
     </section>
     
+    <!-- Section 6: CTA / Demo Form -->
     <section class="contact" id="contact">
         <div class="contact-container">
             <h2>See It In Action</h2>
-            <p style="color: #666; margin-bottom: 1rem;">15-minute demo. No commitment. We'll show you exactly how it works.</p>
+            <p style="color: #666; margin-bottom: 1rem;">15-minute demo. No commitment. See exactly how it works with your type of case.</p>
             <p style="color: #f0883e; font-size: 0.9rem; margin-bottom: 2rem;">Built by a former law firm executive and validated by practicing litigators.</p>
             
             <form class="contact-form" id="demo-form" action="https://formspree.io/f/mdalwqow" method="POST">
