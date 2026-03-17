@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EvidentIQ — Secure AI Legal Discovery for Small Law Firms | AWS Bedrock</title>
-    <meta name="description" content="Enterprise-grade legal discovery AI built for privileged documents. AWS Bedrock routing, AES-256 encryption, zero AI training. Starting $299/month vs $500+/user enterprise platforms.">
+    <meta name="description" content="Privilege-compliant AI legal discovery for litigation firms. Built for attorney-client confidentiality — private cloud infrastructure, zero AI training, AES-256 encryption. Starting $299/month.">
     <meta name="keywords" content="secure legal AI, privileged document analysis, AWS Bedrock legal, small law firm discovery, attorney-client privilege AI, legal document security, litigation AI tools, solo practitioner discovery, civil litigation AI, employment law discovery, secure legal tech, AES-256 legal software">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://evident-iq.com/">
@@ -647,14 +647,14 @@
                 <p>Ask natural language questions — "What evidence supports a hostile work environment claim?" — and get cited answers linked to source documents.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">📅</div>
-                <h3>AI-Built Fact Timelines</h3>
-                <p>Generate a chronological timeline of key events. Filter by type, importance, and date range. Every event links back to its source.</p>
-            </div>
-            <div class="feature-card">
                 <div class="feature-icon">⚡</div>
                 <h3>Contradiction Detection</h3>
                 <p>Surface conflicting statements — denials vs. admissions — ranked by impeachment value. Both sides cited with source documents.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>AI-Built Fact Timelines</h3>
+                <p>Generate a chronological timeline of key events. Filter by type, importance, and date range. Every event links back to its source.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">📂</div>
@@ -678,11 +678,21 @@
         </div>
     </section>
     
+    <!-- Heppner Section -->
+    <section class="built-for" style="background: linear-gradient(180deg, #0f0f1a 0%, #111827 100%); border-top: 1px solid rgba(255,255,255,0.06);">
+        <div class="built-for-content">
+            <h2>What the Heppner Ruling Means for Your Practice</h2>
+            <p>In February 2026, Judge Rakoff of the Southern District of New York ruled in <em>United States v. Heppner</em> that documents a client created using a consumer AI tool were not protected by attorney-client privilege. The reason: consumer AI platforms collect user inputs, may use them for model training, and reserve the right to disclose them to third parties. That destroys confidentiality — and with it, privilege.</p>
+            <p>The court left open a critical distinction. AI tools used at counsel's direction, inside a secure private environment that maintains confidentiality, should be treated differently.</p>
+            <p>EvidentIQ is built to be exactly that tool. Your documents never touch a consumer AI platform.</p>
+        </div>
+    </section>
+
     <!-- 6. Security & Confidentiality -->
     <section class="security">
         <div class="security-content">
             <h2>Security Built for Attorney-Client Privilege</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.125rem; line-height: 1.6; opacity: 0.9;">EvidentIQ routes AI processing through secure AWS infrastructure via Amazon Bedrock (default path). Anthropic never receives your documents directly. Your data is never used for AI training, encrypted at rest with AES-256-GCM, and we collect zero analytics or telemetry.</p>
+            <p style="margin-bottom: 2rem; font-size: 1.125rem; line-height: 1.6; opacity: 0.9;">EvidentIQ routes all AI processing through AWS Bedrock on a private account endpoint. Anthropic never receives your documents directly. Your data is never used for AI training, encrypted at rest with AES-256-GCM, and we collect zero analytics or telemetry.</p>
             <p style="font-size: 1.125rem; line-height: 1.6; opacity: 0.9;">Each case is fully isolated with no cross-contamination between matters or users. Delete your data anytime directly from the application.</p>
         </div>
     </section>
@@ -716,6 +726,10 @@
                         <option value="employment">Employment</option>
                         <option value="civil-rights">Civil Rights</option>
                         <option value="general-civil">General Civil Litigation</option>
+                        <option value="commercial-litigation">Commercial Litigation</option>
+                        <option value="pi">Personal Injury / PI Defense</option>
+                        <option value="family-law">Family Law</option>
+                        <option value="criminal-defense">Criminal Defense</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
@@ -726,6 +740,7 @@
                 </div>
                 
                 <button type="submit" class="btn form-submit" id="submit-btn">Request Early Access →</button>
+                <p style="text-align: center; margin-top: 0.75rem; font-size: 0.8rem; color: #666;">Built to meet the confidentiality standard outlined in <em>United States v. Heppner</em> (S.D.N.Y. 2026).</p>
                 
                 <div id="form-status" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center;"></div>
                 
@@ -736,7 +751,7 @@
     
     <!-- Footer -->
     <footer>
-        <p>© 2026 EvidentIQ. All rights reserved. | <a href="mailto:wsinclair@datastudio.com">Contact</a></p>
+        <p>© 2026 EvidentIQ. All rights reserved. | <a href="mailto:info@evident-iq.com">Contact</a></p>
     </footer>
     
     <script>
