@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ethics & State Bar Guidance on AI Tools: What Attorneys Must Know | EvidentIQ</title>
+    <meta name="description" content="State bars across the U.S. are issuing ethics opinions on AI use in legal practice. Plain-language summaries of ABA Opinion 512, California, Florida, Texas, and New York guidance — and what each means for your firm.">
+    <meta name="keywords" content="ABA Formal Opinion 512 AI, Florida Bar Opinion 24-1 AI, Texas Opinion 705 AI, California AI ethics attorneys, NYC Bar Opinion 2025-6, attorney AI ethics, legal AI confidentiality obligations, state bar AI guidance, AI attorney professional responsibility">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://evident-iq.com/ai-ethics">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://evident-iq.com/ai-ethics">
+    <meta property="og:title" content="AI Ethics & State Bar Guidance: What Attorneys Must Know | EvidentIQ">
+    <meta property="og:description" content="Plain-language summaries of ABA Opinion 512, California, Florida, Texas, and New York guidance on AI use in legal practice — and what each means for your firm.">
+    <meta property="og:site_name" content="EvidentIQ">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8H5JB2FRW3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8H5JB2FRW3');
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #fff;
+            line-height: 1.7;
+            background: #0a0a0f;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: #0a0a0f;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; }
+        .logo span { color: #f0883e; }
+
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: #f0883e;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        .btn:hover { background: #e07730; transform: translateY(-1px); }
+
+        .companion-banner {
+            background: rgba(240, 136, 62, 0.08);
+            border-bottom: 1px solid rgba(240, 136, 62, 0.2);
+            padding: 0.75rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .companion-banner a { color: #f0883e; text-decoration: none; }
+        .companion-banner a:hover { text-decoration: underline; }
+
+        .page-hero {
+            padding: 4rem 5% 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-hero .label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #f0883e;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #fff;
+            margin-bottom: 1.25rem;
+        }
+
+        .page-hero .intro {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .last-reviewed {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #666;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 5% 6rem;
+        }
+
+        .opinion {
+            margin-bottom: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .opinion:last-of-type { border-bottom: none; }
+
+        .opinion-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.25rem;
+        }
+
+        .opinion-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+            background: rgba(240, 136, 62, 0.12);
+            border: 1px solid rgba(240, 136, 62, 0.25);
+            color: #f0883e;
+            white-space: nowrap;
+        }
+
+        .opinion-source {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.45);
+        }
+
+        .opinion h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .opinion .short-version {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.55);
+            font-style: italic;
+            margin-bottom: 1.25rem;
+            padding-left: 1rem;
+            border-left: 2px solid rgba(255,255,255,0.15);
+        }
+
+        .opinion p {
+            color: rgba(255,255,255,0.75);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .opinion h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: rgba(255,255,255,0.4);
+            margin: 1.75rem 0 0.75rem;
+        }
+
+        .rules-list {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .rules-list li {
+            padding: 0.75rem 1rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            color: rgba(255,255,255,0.75);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .rules-list li strong {
+            color: #fff;
+        }
+
+        .implication {
+            margin-top: 1.25rem;
+            padding: 1.25rem 1.5rem;
+            background: rgba(255,255,255,0.02);
+            border-left: 3px solid #f0883e;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1rem;
+        }
+
+        .implication strong {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #f0883e;
+            margin-bottom: 0.5rem;
+        }
+
+        .implication p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .eiq-block {
+            margin-top: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: rgba(240, 136, 62, 0.05);
+            border: 1px solid rgba(240, 136, 62, 0.15);
+            border-radius: 8px;
+        }
+
+        .eiq-block strong {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #f0883e;
+            margin-bottom: 0.5rem;
+        }
+
+        .eiq-block p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.75);
+        }
+
+        .through-line {
+            background: linear-gradient(135deg, #12121a 0%, #0d0d12 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-top: 2px solid #f0883e;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+        }
+
+        .through-line h2 {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 1.25rem;
+        }
+
+        .through-line ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .through-line ul li {
+            padding: 0.5rem 0;
+            color: rgba(255,255,255,0.75);
+            font-size: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .through-line ul li::before {
+            content: "→";
+            color: #f0883e;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .through-line p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .cta-section h2 {
+            font-size: 1.75rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.65);
+            font-size: 1.05rem;
+            max-width: 520px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .cta-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: transparent;
+            color: rgba(255,255,255,0.7);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover {
+            border-color: #f0883e;
+            color: #f0883e;
+        }
+
+        footer {
+            padding: 2rem 5%;
+            background: #0a0a0f;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: #444;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer a { color: #555; text-decoration: none; }
+        footer a:hover { color: #f0883e; }
+
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 1.75rem; }
+            .opinion h2 { font-size: 1.25rem; }
+            .cta-links { flex-direction: column; align-items: center; }
+        }
+    </style>
+    <!-- Crisp Chat -->
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="a4352e39-768a-4735-9512-4c057618fe53";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+<body>
+
+<header>
+    <a href="/" class="logo">Evident<span>IQ</span></a>
+    <a href="/#early-access" class="btn">Request Early Access</a>
+</header>
+
+<div class="companion-banner">
+    Looking for court rulings on privilege? See our companion resource: <a href="/ai-privilege">AI & Attorney-Client Privilege: What the Courts Are Saying →</a>
+</div>
+
+<div class="page-hero">
+    <div class="label">Legal Resource</div>
+    <h1>AI Ethics & State Bar Guidance: What Attorneys Must Know</h1>
+    <p class="intro">Federal courts are addressing privilege. State bars are addressing ethics. Both are pointing to the same conclusion: the tool you choose matters, and the obligations are yours.</p>
+    <p class="intro">This page summarizes the key guidance every litigation attorney should know — from the ABA's national baseline to the state opinions most relevant to active litigators. For the court rulings on privilege specifically, see our companion page: <a href="/ai-privilege" style="color: #f0883e; text-decoration: none;">AI & Attorney-Client Privilege: What the Courts Are Saying</a>.</p>
+    <span class="last-reviewed">Last reviewed: March 2026</span>
+    <p style="font-size: 0.8rem; color: #555; margin-top: 0.75rem;">AI ethics guidance is evolving rapidly. Attorneys should verify current guidance with their state bar and should not rely on this page as legal advice.</p>
+</div>
+
+<div class="content">
+
+    <!-- ABA -->
+    <div class="opinion">
+        <div class="opinion-meta">
+            <span class="opinion-badge">National Baseline</span>
+            <span class="opinion-source">ABA · July 2024</span>
+        </div>
+        <h2>ABA Formal Opinion 512 — The Starting Point for Every Jurisdiction</h2>
+        <p class="short-version">The short version: Attorneys must understand AI before using it, protect client confidentiality when using it, and charge fees honestly because of it.</p>
+        <p>In July 2024, the American Bar Association issued its first formal guidance on generative AI in legal practice. Formal Opinion 512 does not prohibit AI use — it sets the ethical floor. Four Model Rules are squarely implicated:</p>
+        <ul class="rules-list">
+            <li><strong>Rule 1.1 — Competence.</strong> Attorneys must understand the benefits and risks of AI tools they use, including how the tool handles client data, whether it hallucinates, and what its limitations are. Choosing a tool without understanding it is not competent practice.</li>
+            <li><strong>Rule 1.6 — Confidentiality.</strong> Any client information processed by an AI tool must be protected under the same standard as any other confidential communication. This requires understanding the platform's privacy policy, data retention practices, and whether inputs are used for model training.</li>
+            <li><strong>Rule 1.4 — Communication.</strong> Attorneys may have an obligation to disclose AI use to clients, particularly where it affects how their matter is being handled or what costs are being incurred.</li>
+            <li><strong>Rule 1.5 — Fees.</strong> Efficiencies gained through AI must be passed on to clients on hourly matters. Billing full time for work that took a fraction of the time because of AI is an ethics violation.</li>
+        </ul>
+        <div class="implication">
+            <strong>What this means for your practice</strong>
+            <p>Opinion 512 is the national baseline. Whether your state bar has issued its own guidance or not, these four obligations apply. The opinion has been cited in nearly every state bar AI opinion issued since — treating it as settled foundation, not optional guidance.</p>
+        </div>
+        <div class="eiq-block">
+            <strong>How EIQ addresses it</strong>
+            <p>EIQ is purpose-built for Rule 1.6 compliance. Client documents are processed through private AWS infrastructure, never used for model training, and encrypted at rest with AES-256-GCM. The tool is designed for attorney-directed use on specific matters — not general-purpose AI where confidentiality cannot be guaranteed.</p>
+        </div>
+    </div>
+
+    <!-- California -->
+    <div class="opinion">
+        <div class="opinion-meta">
+            <span class="opinion-badge">California</span>
+            <span class="opinion-source">State Bar · November 2023 · Updated 2024</span>
+        </div>
+        <h2>California Practical Guidance — Understanding LLMs Is Not Optional</h2>
+        <p class="short-version">The short version: California attorneys must understand how large language models actually work before using them on client matters — including the specific risks of the tool they choose.</p>
+        <p>The California State Bar's Practical Guidance, approved by the Board of Trustees in November 2023 and developed further through 2024, goes further than most states on the competence requirement. It is not enough to know that AI exists or that it can help — attorneys must understand the model they are using, including its hallucination risks, its data handling practices, and whether its outputs can be verified.</p>
+        <ul class="rules-list">
+            <li><strong>Understand the tool specifically.</strong> Generic AI literacy is not sufficient. An attorney using a legal AI tool must understand that specific tool's data policy, model architecture at a basic level, and known limitations.</li>
+            <li><strong>Evaluate confidentiality before using.</strong> Before inputting any client data, attorneys must evaluate whether the platform's privacy policy and terms of service are compatible with California's confidentiality obligations under Business and Professions Code § 6068(e) and Rule 1.6 of the California Rules of Professional Conduct.</li>
+            <li><strong>Supervise AI output.</strong> AI-generated work product must be reviewed by the attorney before use. Delegation without supervision is not ethically permissible.</li>
+        </ul>
+        <div class="implication">
+            <strong>What this means for your practice</strong>
+            <p>California's guidance is the most demanding on the competence side. Attorneys cannot simply adopt a tool their firm has approved — they bear individual responsibility for understanding the tool they are using and evaluating its compatibility with client confidentiality obligations.</p>
+        </div>
+        <div class="eiq-block">
+            <strong>How EIQ addresses it</strong>
+            <p>EIQ is designed for attorney evaluation. The privacy policy and data handling practices are specific and verifiable: private cloud routing, no training on client data, encryption at rest. The tool produces cited output linked directly to source documents — every answer is verifiable against the record, not a hallucinated summary.</p>
+        </div>
+    </div>
+
+    <!-- Florida -->
+    <div class="opinion">
+        <div class="opinion-meta">
+            <span class="opinion-badge">Florida</span>
+            <span class="opinion-source">The Florida Bar · January 2024</span>
+        </div>
+        <h2>Florida Opinion 24-1 — The First State Bar Formal AI Ethics Opinion</h2>
+        <p class="short-version">The short version: Florida attorneys can use AI, but confidentiality, competence, billing, and advertising obligations all apply — and billing for AI-generated time savings you didn't spend is a violation.</p>
+        <p>Florida's Opinion 24-1, issued January 2024, was the first comprehensive state bar ethics opinion on AI in legal practice in the country. Its four key areas:</p>
+        <ul class="rules-list">
+            <li><strong>Confidentiality first.</strong> Lawyers using AI must educate themselves on the tool's policies for data handling, sharing, and self-learning before use. Inputting confidential client information into a platform that trains on user data or shares with third parties is a potential Rule 4-1.6 violation.</li>
+            <li><strong>Competence requires verification.</strong> AI output must be independently verified before use. Submitting AI-generated work product without review exposes the attorney to sanctions, malpractice liability, and bar discipline.</li>
+            <li><strong>Billing must reflect reality.</strong> If AI cuts a four-hour research task to forty-five minutes, the client on hourly billing is entitled to the benefit of that efficiency. Billing the full four hours is unethical. Opinion 24-1 makes clear that AI savings belong to the client, not the firm.</li>
+            <li><strong>Advertising rules apply.</strong> AI-generated marketing materials, client communications, and website content are subject to the same advertising rules as attorney-drafted content. Attorneys are responsible for AI-generated content they publish.</li>
+        </ul>
+        <div class="implication">
+            <strong>What this means for your practice</strong>
+            <p>Florida's opinion is the clearest on the billing issue, which is the one most attorneys underestimate. The efficiency argument for AI cuts both ways — it is a reason to adopt AI and a reason to reduce hourly billing simultaneously. On confidentiality, Florida's standard tracks the ABA: the platform's data practices must be compatible with Rule 4-1.6 before any client data goes in.</p>
+        </div>
+        <div class="eiq-block">
+            <strong>How EIQ addresses it</strong>
+            <p>EIQ's pricing model is a flat monthly subscription, not hourly billing — eliminating the billing ethics tension entirely. On confidentiality, the platform meets Florida's standard: documented data practices, no training on client data, verifiable privacy commitments.</p>
+        </div>
+    </div>
+
+    <!-- Texas -->
+    <div class="opinion">
+        <div class="opinion-meta">
+            <span class="opinion-badge">Texas</span>
+            <span class="opinion-source">State Bar of Texas · February 2025</span>
+        </div>
+        <h2>Texas Opinion 705 — Vet Your Vendor Before You Use It</h2>
+        <p class="short-version">The short version: Texas attorneys must thoroughly vet AI tools for confidentiality safeguards before using them on client matters — and must train staff to comply with the same obligations.</p>
+        <p>Texas Opinion 705, issued February 2025, addresses four core obligations. The most operationally significant for firms adopting AI is the vendor vetting requirement.</p>
+        <ul class="rules-list">
+            <li><strong>Understand how the tool functions.</strong> Rule 1.01 of the Texas Disciplinary Rules requires competence in the tools attorneys use. For AI, this means understanding how the model generates outputs, what its known failure modes are, and how to identify errors.</li>
+            <li><strong>Vet the vendor specifically for confidentiality.</strong> Opinion 705 requires attorneys to thoroughly evaluate AI tools for confidentiality safeguards before use — not to assume compliance. The evaluation should include: whether data is shared with third parties, whether inputs are used for training, what the data retention policy is, and whether the platform provides contractual confidentiality commitments.</li>
+            <li><strong>Train staff.</strong> The obligation extends to non-attorney staff using AI at the attorney's direction. Supervisory attorneys are responsible for ensuring subordinates understand and comply with confidentiality rules when using AI tools.</li>
+            <li><strong>Verify all output.</strong> No AI output may be submitted to a court or provided to a client without independent attorney verification. The hallucination risk is explicitly noted as a professional responsibility concern.</li>
+        </ul>
+        <div class="implication">
+            <strong>What this means for your practice</strong>
+            <p>Texas Opinion 705 is the most operationally demanding on the vendor side. Attorneys cannot rely on a vendor's marketing representations — they must review the actual data policy and evaluate it against their confidentiality obligations. Firms should document their vendor evaluation process as part of their AI policy.</p>
+        </div>
+        <div class="eiq-block">
+            <strong>How EIQ addresses it</strong>
+            <p>EIQ is designed to survive vendor vetting. The privacy commitments are specific and contractually grounded: AWS Bedrock routing with documented no-training guarantees, AES-256-GCM encryption, zero telemetry collection. The data practices are stated precisely so attorneys can evaluate them — not summarized in marketing language.</p>
+        </div>
+    </div>
+
+    <!-- NYC -->
+    <div class="opinion">
+        <div class="opinion-meta">
+            <span class="opinion-badge">New York</span>
+            <span class="opinion-source">NYC Bar Association · December 2025</span>
+        </div>
+        <h2>NYC Bar Formal Opinion 2025-6 — AI Notetakers and Client Calls</h2>
+        <p class="short-version">The short version: Before using any AI tool to record, transcribe, or summarize client conversations, attorneys must obtain client consent, evaluate privilege implications, and understand the tool's data practices.</p>
+        <p>NYC Bar Opinion 2025-6, issued December 2025, addresses a specific and rapidly expanding practice: using AI notetakers and transcription tools on calls with clients. It is the most recent major bar opinion and directly relevant to any attorney using tools like Otter.ai, Zoom AI, or similar platforms on client calls.</p>
+        <ul class="rules-list">
+            <li><strong>Client consent is required.</strong> Before recording any client call with an AI tool, the attorney must obtain the client's informed consent — not just notify them, but ensure they understand the implications.</li>
+            <li><strong>Privilege analysis is mandatory.</strong> Attorneys must consider whether recording the conversation creates discoverable material. A preserved AI transcript of a client's candid remarks may be usable by opposing counsel. The attorney must evaluate whether recording serves the client's interest in the specific matter.</li>
+            <li><strong>Understand the data practices of the tool.</strong> Attorneys must evaluate where recordings are stored, how long they are retained, whether the data is used for training, whether there is a right to deletion, and how the data might be retrieved through discovery.</li>
+            <li><strong>Accuracy verification is required.</strong> AI transcripts and summaries must be checked for accuracy before being relied upon or preserved as work product.</li>
+        </ul>
+        <div class="implication">
+            <strong>What this means for your practice</strong>
+            <p>Opinion 2025-6 is a direct response to the widespread adoption of AI notetaking tools without adequate attorney oversight. Many firms adopted these tools during the remote-work period without evaluating their ethical implications. The opinion makes clear that the confidentiality analysis applies to every tool that touches client communications — not just document review platforms.</p>
+        </div>
+        <div class="eiq-block">
+            <strong>How EIQ addresses it</strong>
+            <p>EIQ is a document analysis platform, not a call recording tool — so Opinion 2025-6 does not directly govern its use. However, the underlying principle is the same: any AI tool that processes client information must meet the confidentiality standard. EIQ's architecture is built to meet that standard across all the guidance above.</p>
+        </div>
+    </div>
+
+    <!-- Through-line -->
+    <div class="through-line">
+        <h2>The Through-Line Across All Five Opinions</h2>
+        <p style="color: rgba(255,255,255,0.75); font-size: 1rem; margin-bottom: 1.25rem; border: none; padding: 0;">Every major ethics opinion issued in the last two years points to the same framework for compliant AI use:</p>
+        <ul>
+            <li>The tool must process client data in a private environment.</li>
+            <li>The platform must contractually commit to not training on user data.</li>
+            <li>The attorney must direct the use — not the client independently.</li>
+            <li>The output must be verified before reliance.</li>
+        </ul>
+        <p>Consumer AI platforms fail the first two conditions by design. Enterprise tools built for legal use, with documented privacy commitments and private cloud infrastructure, are what the guidance is pointing toward.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>EvidentIQ is built to meet this standard.</h2>
+        <p>Private AWS infrastructure. Zero AI training on your documents. AES-256 encryption. Cited output linked directly to source documents. Built for attorney-directed use on specific matters.</p>
+        <div class="cta-links">
+            <a href="/#early-access" class="btn">Request Early Access →</a>
+            <a href="/#how-it-works" class="btn-outline">See How It Works →</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 EvidentIQ. All rights reserved. | <a href="mailto:info@evident-iq.com">Contact</a> | <a href="/">Back to Home</a> | <a href="/ai-privilege">AI & Privilege: Court Rulings</a></p>
+    <p style="margin-top: 0.5rem; font-size: 0.75rem; color: #333;">This page is for informational purposes only and does not constitute legal advice. Attorneys should verify current guidance with their state bar association. Last reviewed: March 2026.</p>
+</footer>
+
+</body>
+</html>
